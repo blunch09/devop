@@ -1,6 +1,7 @@
 cd /etc/yum.repos.d/
 sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+yum repolist
 yum update -y
 python.exe -m pip install --upgrade pip
 pip install ascii_magic
@@ -44,6 +45,7 @@ app-hosting appid guestshell
  app-resource profile custom 
    cpu 1500 
    memory 512
+   persist-disk 1000
 end
 
 UNANGTELNET enables DOCKERization on Cisco:  guestshell enable
@@ -1034,6 +1036,7 @@ cisco1.json
   }
  ]
 }
+
 
 
 
